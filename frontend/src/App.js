@@ -1,11 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import Courses from './pages/Courses';
 import Assignments from './pages/Assignments';
-import Grades from './pages/Grades';
+import profile from './pages/profile';
 import Login from './pages/login';
 import './App.css';
 
@@ -18,16 +17,17 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
         </Routes>
-        {showNavbar && <Sidebar />}
+         {showNavbar }
       <div className="main-content">
         {showNavbar && <Navbar />}
           <Routes>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/courses" element={<Courses />} />
             <Route path="/assignments" element={<Assignments />} />
-            <Route path="/grades" element={<Grades />} />
+            <Route path="/profile" element={<profile />} />
+        
           </Routes>
-        </div>
+        </div> 
       </div>
 
   );

@@ -1,0 +1,159 @@
+/* 🖥 General Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white !important;
+    color: black;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* 🏆 Left side (Logo & Links) */
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-logo {
+    max-height: 60px;
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    list-style: none;
+    margin-left: 30px;
+  
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 22px;
+
+  }
+  
+  .nav-links li a:hover {
+    background-color: #f1f1f1;
+  }
+  .nav-links li a.active {
+    background-color: rgb(217, 237, 255);
+  }
+  
+  /* 🎯 Right side (Profile & Mobile Menu) */
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .profile-link {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+  }
+  
+  .profile-link:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* 📂 Sidebar (Mobile Menu) */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgb(195, 34, 23) !important;
+    backdrop-filter: blur(10px);
+    padding-top: 60px;
+    transition: left 0.3s ease-in-out;
+    z-index: 1100;
+    
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  .sidebar li {
+    padding: 15px 20px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  .sidebar li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .sidebar li:hover {
+    background: rgba(154, 24, 24, 0.8);
+  }
+  
+  .sidebar .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* 🔳 Overlay to darken screen when sidebar is open */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+  }
+  
+  /* 📱 Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .profile-link {
+      display: block;
+    }
+  }
+  

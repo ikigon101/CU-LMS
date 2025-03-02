@@ -16,15 +16,17 @@ const Assignments = () => {
   };
 
   return (
-    <div>
-      <h1 className="page-title">Assignments</h1>
-      <div className="assignment-grid">
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-6">Assignments</h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {assignments.map((assignment) => (
           <AssignmentCard key={assignment.id} assignment={assignment} />
         ))}
       </div>
-      <FileUpload onFileUpload={handleFileUpload} />
-      {file && <p>Uploaded file: {file.name}</p>}
+      <div className="mt-6">
+        <FileUpload onFileUpload={handleFileUpload} />
+        {file && <p className="mt-4 text-gray-700">Uploaded file: {file.name}</p>}
+      </div>
     </div>
   );
 };

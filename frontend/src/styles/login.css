@@ -1,0 +1,91 @@
+.loginPage{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('/Users/jyotsnachauhan/Desktop/LMS/frontend/src/imgs/background_login.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fdfdfd;
+        height: 100%;
+        max-height: 600px;
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        padding: 30px 40px;
+    }
+
+.login-container .logo{
+ max-width: 500px;
+ width: 100%;
+ margin-bottom: 10px;
+
+}
+.login-container .input-box{
+    position: relative;
+    padding: 10px;
+    width: 100%;
+    height: 75px;
+    margin: 20px 0;
+   
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    font-size: 18px;
+    color: #333;
+    outline: none;
+    border: 2px solid #333;
+    border-radius: 10px;
+    color: #000;
+    background: transparent;
+    padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+    color: #171717;
+}
+.input-box .icon{
+    position: absolute;
+    transform: translateY(-50%);
+    right: 20px;
+    top: 50%;
+    font-size: 16px;
+    
+
+}
+
+.login-container button{
+    width: 100%;
+    height: 45px;
+    background: #ae2f2f;
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e8e8e8;
+    margin-top: 20px;
+
+
+}
+.login-container button:hover{
+    background: linear-gradient(90deg, #d33e23, #d6345a);
+    box-shadow: 0px 4px 10px rgba(255, 75, 43, 0.5);
+}
+
+.forgotpassword{
+    display: block;
+    text-align: right;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 16px;
+}

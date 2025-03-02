@@ -1,0 +1,119 @@
+/* Dashboard.css */
+
+div {
+    box-sizing: border-box;
+  }
+  
+  .dashboard-content {
+    display: grid;
+    background-color: blueviolet;
+    gap: 20px;
+    padding: 50px;
+    margin: 2.5rem 6rem 1rem 6rem;
+    height: 900px;
+
+    grid-template-areas:
+    "courses notifications"
+    "timeline timeline"; /* Timeline takes full width below */
+    overflow:scroll;
+  }
+
+  .courses-section, .notifications-section {
+    flex: 1;
+    min-width: 300px;
+    max-height: 500px;
+  }
+  
+  .courses-section {
+    grid-area: courses;
+    padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #b62424;}
+    
+  
+    .text-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+       
+      }
+
+      .text-row .text{
+        font-size: 28px;
+      }
+      .text-row .view-all{
+        font-size: 18px;
+        color: rgb(8, 8, 8);
+        text-decoration: none;
+      }
+      
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     grid-column-gap:  3rem;
+     grid-row-gap: 2rem ;
+     padding: 20px;
+  }
+  
+  .course-card{
+    background-color: white;
+    aspect-ratio: 1 / 1; /* Ensures square shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius : 20px;
+    margin-left: 1rem;
+   
+
+  }
+   .notification-card {
+    background: white;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    grid-row-gap:  20px;
+  }
+  .notifications-section {
+    display: grid;
+    background-color: #7d4646;
+    grid-area: notifications;
+    padding: 15px;
+  }
+  .timeline-section {
+    grid-area: timeline;
+    margin-top: 20px;
+    background-color: blue;
+   
+  }
+  
+  .timeline-filters select {
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .timeline-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  @media (max-width: 900px) {
+    .dashboard-content {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "courses"
+        "notifications"
+        "timeline"; /* All sections stack vertically */
+        margin: 1rem 1rem 1rem 1rem;
+
+    }
+
+  }
